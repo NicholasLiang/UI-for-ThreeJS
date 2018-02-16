@@ -3,6 +3,8 @@ ThreeJSCanvasTheme with UI
 
 ### A simple ThreeJS Canvas Theme
 
+![alt text](https://github.com/NicholasLiang/UI-for-ThreeJS/blob/master/preview.png)
+
 #### Aim: Main Focus on the ThreeJS Content
 
 1) Logo and Brand on the top left
