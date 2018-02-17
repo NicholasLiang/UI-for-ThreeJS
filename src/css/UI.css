@@ -152,4 +152,8 @@ body {
     font-size: 0.8em;
     color: #fff;
   }
+  .skip-line::after {
+    content: none;
+    white-space: normal;
+  }
 }
