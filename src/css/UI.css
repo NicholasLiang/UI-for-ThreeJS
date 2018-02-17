@@ -1,257 +1,159 @@
-html, body {
-  width: 100%;
-  height: 100%;
+* {
   margin: 0;
-  padding: 0;
   border: 0;
+  padding: 0;
+}
+body {
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
 }
-.main-container {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  background-color: transparent;
-  font-size: 100%;
+#threeJS-container {
+  z-index: -1;
 }
 .UI {
-  display: block;
   position: absolute;
+  z-index: 15000;
   top: 0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  font-size: 2.2rem;
+}
+.UI img{
+  height: 1em;
+}
+.small-fonts {
+  font-size: 0.5em;
+  color: #aaa;
+}
+.normal-fonts, .normal-fonts a {
+  font-size: 1em;
+  color: #ccc;
+}
+.normal-fonts a:hover {
+  color: #fff;
+}
+.large-fonts, .large-fonts a {
+  font-size: 1em;
+  color: #fff;
+}
+.links a {
+  text-decoration: none;
+}
+.hamburger, .closebtn {
+  position: absolute;
+  visibility: hidden;
 }
 .brand {
-  display: block;
-  margin: 0.8em 0em 0em 0.5em;
-  float: left;
+  margin: 0.8rem 0 0 0.5rem;
 }
-.brand a{
-  font-size: calc(0.9rem + 1vw);
-  text-decoration: none;
-  color: white;
-  font-family:'Terminator Real NFI';
-  font-weight:normal;
+.terminator-font {
+  font-family: 'Terminator Real NFI';
+  font-weight: normal;
 }
-#header-logo {
+#blender-club-logo {
   position: relative;
-  top: 0.155em;
-  height: calc(1rem + 1vw);
+  top: 0.25rem;
 }
-#hamburger img {
-  position: relative;
-  top: 0.555rem;
-  display: block;
-  height: calc(1rem + 4vw);
-  float: right;
-  cursor:pointer;
-}
-#threeJS-container {
+.navbar-contents {
   position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin: 0 auto;
-  z-index: -1;
+  bottom: 1.3em;
+  left: 1em;
+  font-size: 0.7em;
+  font-weight: 900;
 }
-#navbar {
-  height: 0%;
-  width: 100%;
-  position: fixed;
-  z-index = 100;
-  top: 0;
-  left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.8);
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  line-height: 5rem;
-}
-#rel_img {
-  width: 100%;
-  margin: 1em 0em;
-  text-align: center;
-}
-.closebtn-container {
-  display: block;
-  position: sticky;
-  right: 0.8rem;
-  top: 0.5rem;
-  text-align: right;
-}
-.closebtn {
-  font-size: 2.5em;
-}
-#paths {
-  list-style-type: none;
-}
-#navbar a {
-  font-size: calc(1.4rem + 4vw);
-  text-decoration: none;
-  color: white;
-}
-#navbar img {
-  height: calc(1.4rem + 4vw);
-}
-#copyright {
-  width: 100%;
-  text-align: center;
-  font-size: calc(0.7rem + 1vw);
-  color: white;
-  margin-bottom: 2em;
-}
-#rel_img {
-  text-align: middle;
-  line-height: 5rem;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-#rel_img li {
+.navbar-contents li {
   display: inline;
+  margin-right: 12px;
 }
-#facebook{
-  margin-right: 8vw;
+.copyright {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
-@media screen and (min-width: 768px) {
-  .brand a{
-    font-size: 1.7rem;
+.reference-img {
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+}
+.reference-img img {
+  display: block;
+  float: right;
+}
+.active {
+  color: #fff;
+}
+.skip-line::after {
+  content: "\A";
+  white-space: pre;
+}
+@media screen and (max-width: 768px) {
+  .hamburger, .closebtn {
+    visibility: visible;
   }
-  #header-logo {
-    height: 2rem;
+  .large-fonts a {
+    font-size: 1.6em;
   }
-  #hamburger img {
-    visibility: hidden;
+  #blender-club-logo {
+    top: 0.15rem;
   }
-  .closebtn-container {
-    visibility: hidden;
+  .UI {
+    font-size: calc(0.9rem + 1vw);
   }
-  #navbar {
-    position: absolute;
-    height: 100% !important;
-    background-color: transparent;
+  .hamburger, .closebtn {
+    top: 0.5em;
+    right: 0.5em;
   }
-  #paths {
-    margin-bottom: 2.9rem;
-    width: 100%;
-    position:absolute;
-    bottom: 0;
+  .hamburger img {
+    height: 1.5em;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
     left: 0;
-  }
-  #paths li {
-    display: inline;
-    margin-right: 1rem;
-  }
-  #navbar a {
-    font-size: 1.4rem;
-    text-decoration: none;
-    color: white;
-  }
-  #navbar img {
-    height: 1.8rem ;
-  }
-  #copyright {
-    position: absolute;
-    bottom: 0;
+    height: 0%;
     width: 100%;
-    text-align: center;
-    font-size: 1rem;
-    color: white;
-    margin-bottom: 1em;
-    z-index: 20;
-    color: #aaa;
+    overflow-x: hidden;
+    transition: 0.3s;
   }
-  #rel_img {
-    position: absolute;
-    bottom: 2.2rem;
-    padding: 0;
-    text-align: right;
-    list-style-position: inside;
-    line-height: 2rem;
+  .dark-filter {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
   }
-  #rel_img li {
+  .navbar-contents {
+    position: static;
+    bottom: auto;
+    margin-top: 1em;
+    margin-left: 0.4em;
+    font-size: 2.5em;
+    line-height: 1.5em;
+  }
+  .navbar-contents li {
     display: block;
-  }
-  #facebook{
     margin-right: 0;
   }
-}
-
-/*html, body {
-  width: 100%;
-   height: 100%;
-   margin: 0;
-   padding: 0;
-   border: 0;
-   overflow: hidden;
-   background-color:#000;
-}
-canvas {
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-header {
-  position: absolute;
-  top: 1rem;
-  width: 100%;
-  height: 100%;
-}
-header a {
-  font-size: 1.8rem;
-  text-decoration: none;
-  color: white;
-}
-#header-logo {
-  position: relative;
-  height: 1.8rem;
-  margin-left: 0.5rem;
-  top: 0.3rem;
-}
-#hamburger {
-  position: absolute;
-  top: -0.2rem;
-  right: 0.5rem;
-  height: 2.8rem;
-}
-#header-menu {
-  background-color: rgba(255,255,255,.5);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}
-#header-menu ul li a {
-  font-size: calc(36px + 2vw);
-  line-height: 1.5em;
-}
-#header-menu ul li a:hover {
-
-}
-#header-menu ul {
-  list-style-type: none;
-}
-#header-menu img {
-  height: 1.8rem;
-}
-footer {
-
-}
-@media screen and (min-width: 1024px) {
-  #header-menu {
+  .reference-img {
+    position: static;
+    text-align: center;
+    margin: 1em;
   }
-  #header-menu ul li a {
+  .reference-img img {
+    display: inline;
+    float: none;
+    height: 2.6em;
+    margin-right: 2.5em;
   }
-  #header-menu img {
+  .copyright {
+    position: static;
   }
-  footer {
+  .small-fonts {
+    font-size: 0.8em;
+    color: #fff;
   }
-  #hamburger img {
+  .skip-line::after {
+    content: none;
+    white-space: normal;
   }
-}*/
+}
