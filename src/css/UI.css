@@ -85,6 +85,10 @@ body {
 .active {
   color: #fff;
 }
+.skip-line::after {
+  content: "\A";
+  white-space: pre;
+}
 @media screen and (max-width: 768px) {
   .hamburger, .closebtn {
     visibility: visible;
