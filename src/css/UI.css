@@ -1,159 +1,236 @@
-* {
-  margin: 0;
-  border: 0;
-  padding: 0;
-}
 body {
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
-}
-#threeJS-container {
-  z-index: -1;
-}
-.UI {
-  position: absolute;
-  z-index: 15000;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  margin: 0;
   font-size: 2.2rem;
 }
-.UI img{
-  height: 1em;
+#threeJS-container {
+  background-color: #000;
 }
-.small-fonts {
-  font-size: 0.5em;
-  color: #aaa;
-}
-.normal-fonts, .normal-fonts a {
-  font-size: 1em;
-  color: #ccc;
-}
-.normal-fonts a:hover {
-  color: #fff;
-}
-.large-fonts, .large-fonts a {
-  font-size: 1em;
-  color: #fff;
-}
-.links a {
-  text-decoration: none;
-}
-.hamburger, .closebtn {
+.UI-threeJS {
   position: absolute;
-  visibility: hidden;
+  height: 0%;
+  width: 100%;
 }
-.brand {
-  margin: 0.8rem 0 0 0.5rem;
+.ui-top {
+  top: 0;
+}
+.ui-bottom {
+  bottom: 0;
+  transition: 0.2s;
+}
+.hamburger {
+  display: none;
+}
+.closebtn-container {
+  visibility: hidden;
 }
 .terminator-font {
   font-family: 'Terminator Real NFI';
-  font-weight: normal;
 }
-#blender-club-logo {
+.pointer {cursor: pointer;}
+h1, h2, h3, h4, h5, h6, p, a, span, strong {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-height: 1em;
+}
+.brand {
+  position: fixed;
+  margin: 0.8rem 0 0 0.5rem;
+}
+.brand img {
   position: relative;
   top: 0.25rem;
 }
-.navbar-contents {
+.brand h1 {
+  font-size: 1em;
+  display: inline;
+}
+.navbar-container {
+  position: relative;
+  bottom: 0;
+  height: 0%;
+  width: 100%;
+}
+.navbar {
   position: absolute;
-  bottom: 1.3em;
+  bottom: 1.2rem;
   left: 1em;
-  font-size: 0.7em;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+}
+.navbar li {
+  display: inline;
+  margin-right: 6px;
+  padding: 4px;
   font-weight: 900;
 }
-.navbar-contents li {
-  display: inline;
-  margin-right: 12px;
+.navbar li a:hover {
+  color: #ffbe1b;
+  text-shadow: 0px 5px 20px #fff1ce;
+}
+.navbar li:first-of-type {
+  font-size: 1.2em;
+  border: 2px solid #ff9605;
+  border-radius: 8px;
+}
+.external-link {
+  position: absolute;
+  right: 1em;
+  bottom: 0.5em;
+}
+.external-link img {
+  margin-bottom: 12px;
+  float: right;
 }
 .copyright {
   position: absolute;
-  bottom: 0;
+  bottom: 1.1em;
   width: 100%;
-  margin: 0 auto;
+  height: 0%;
   text-align: center;
 }
-.reference-img {
-  position: absolute;
-  bottom: 0.5em;
-  right: 0.5em;
+.copyright strong {
+  font-size: 0.5em;
+  color: #aaa;
 }
-.reference-img img {
-  display: block;
-  float: right;
-}
-.active {
-  color: #fff;
-}
-.skip-line::after {
-  content: "\A";
-  white-space: pre;
-}
-@media screen and (max-width: 768px) {
-  .hamburger, .closebtn {
-    visibility: visible;
+@media screen and (max-width: 900px) {
+  .hamburger {
+    display: block;
   }
-  .large-fonts a {
-    font-size: 1.6em;
+  .hamburger img {
+    max-height: 2em;
+    height: 1.4em;
+    margin-top: -0.4rem;
   }
-  #blender-club-logo {
-    top: 0.15rem;
-  }
-  .UI {
-    font-size: calc(0.9rem + 1vw);
-  }
-  .hamburger, .closebtn {
+  .hamburger {
+    position: fixed;
     top: 0.5em;
     right: 0.5em;
   }
-  .hamburger img {
-    height: 1.5em;
+  .external-link img {
+    max-height: 2em;
+    height: 2em;
+    margin-right: 8px;
   }
-  .navbar {
-    position: fixed;
+  .ui-top {
     top: 0;
-    left: 0;
+  }
+  .ui-bottom {
+    top: 0;
     height: 0%;
     width: 100%;
-    overflow-x: hidden;
-    transition: 0.3s;
-  }
-  .dark-filter {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.8);
   }
-  .navbar-contents {
-    position: static;
-    bottom: auto;
-    margin-top: 1em;
-    margin-left: 0.4em;
-    font-size: 2.5em;
-    line-height: 1.5em;
+  .navbar-container {
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    margin-left: 1em;
+    overflow-y: auto;
   }
-  .navbar-contents li {
+  .closebtn-container {
+    display: inline;
+    position: relative;
+    visibility: visible;
+    float: right;
+    margin-bottom: -2rem;
+    margin-top: 1rem;
+    margin-right: 3.5rem;
+    font-size: 1.4em;
+    background-color: #ff9605;
+    border-radius: 12px;
+    padding: 0px 8px;
+  }
+  .navbar {
+    display: inline-block;
+    position: static;
+    margin-top: 6rem;
+  }
+  .navbar ul {
+    padding-left: 1em;
+  }
+  .navbar li {
     display: block;
     margin-right: 0;
+    padding: 0;
+    line-height: 1.5em;
+    font-size: 1.5em;
   }
-  .reference-img {
-    position: static;
-    text-align: center;
-    margin: 1em;
+  .navbar li:first-of-type {
+    font-size: 1.7em;
+    border: 2px solid #ff9605;
+    border-radius: 8px;
   }
-  .reference-img img {
-    display: inline;
+  .external-link {
+    position: relative;
+    right: auto;
+    margin: 2rem 0rem 2rem 4rem;
+    max-height: 2em;
+    height: 2em;
+  }
+  .external-link img {
+    margin-bottom: 0;
     float: none;
-    height: 2.6em;
-    margin-right: 2.5em;
   }
   .copyright {
-    position: static;
+    position: relative;
+    bottom: auto;
+    margin-top: -4rem;
+    margin-left: -2rem;
   }
-  .small-fonts {
-    font-size: 0.8em;
-    color: #fff;
+  .copyright strong {
+    font-size: 0.5em;
+    color: #aaa;
   }
-  .skip-line::after {
-    content: none;
-    white-space: normal;
-  }
+
+
 }
+
+@media screen and (max-width: 620px) {
+  body {
+    font-size: calc(1rem + 5vw);
+  }
+  .navbar {
+    display: inline-block;
+    position: static;
+    margin-top: 4rem;
+  }
+  .brand {
+    position: fixed;
+    margin: 0 0 0 0.3rem;
+  }
+  .brand img {
+    position: relative;
+    top: 0.15rem;
+    height: 0.55em;
+  }
+  .brand h1 {
+    font-size: 0.55em;
+    display: inline;
+  }
+  .hamburger img {
+    height: 1em;
+    margin-bottom: 0.6rem;
+    margin-right: -1rem;
+  }
+  .external-link img {
+    height: 1.5em;
+  }
+  .navbar ul {
+    padding-left: 0;
+  }
+  .external-link {
+    margin: 2rem auto;
+  }
+  .closebtn-container {
+    margin-right: calc(0.5rem + 5vw);
+  }

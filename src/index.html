@@ -19,7 +19,6 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="css/font/style.css" rel="stylesheet">
 
-
   <!--     CSS for whole Application (MVC)     -->
   <link href="css/UI.css" rel="stylesheet" />
 
@@ -30,38 +29,34 @@
   <!-- ThreeJS canvas container -->
   <div id="threeJS-container"></div>
 
-  <div class="UI">
+  <div class="UI-threeJS ui-top">
     <!-- hamburger image -->
-    <div class="hamburger">
-      <img src="images/hamburger.svg" alt="hamburger" onclick="openNav()"
-           onmouseover="this.src = 'images/hamburger_hover.svg';"
-           onmouseout="this.src = 'images/hamburger.svg';"/>
+    <div class="hamburger pointer">
+      <img src="images\hamburger.svg" alt="hamburger">
     </div>
 
     <!-- Blender Club brand -->
-    <div class="brand links">
+    <div class="brand">
       <a href="index.html">
         <img id="blender-club-logo" src="images\Blender_Club_Logo_Thumbnail_4kb.png" alt="logo"/>
-        <strong class="terminator-font large-fonts">Blender Club</strong>
+        <h1 class="terminator-font">Blender Club</h1>
       </a>
     </div>
+  </div>
 
-    <!-- navbar -->
-    <div id="navbar" class="navbar dark-filter">
-
+  <div class="UI-threeJS ui-bottom">
+    <!-- navbar container-->
+    <div class="navbar-container">
       <!-- close button -->
-      <div class="closebtn-div links large-fonts">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-          &times;
-        </a>
+      <div class="closebtn-container">
+          <h4 class="closebtn pointer">&times;</h4>
       </div>
 
-      <!-- navbar list -->
-      <div class="navbar-contents links normal-fonts">
+      <!-- navbar -->
+      <div class="navbar">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
           <li><a href="gallery.html">3D Gallery</a></li>
-          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="help.html">Help</a></li>
           <li><a href="terms.html">Terms</a></li>
           <li><a href="privacy.html">Privacy</a></li>
@@ -69,7 +64,7 @@
       </div>
 
       <!-- facebook and SFSS link -->
-      <div class="reference-img">
+      <div class="external-link">
         <a class="skip-line" href="https://www.facebook.com/groups/1922956744587342/?ref=bookmarks">
           <img src="images\facebook.svg" alt="facebook"/>
         </a>
@@ -79,17 +74,17 @@
       </div>
 
       <!-- copyright -->
-      <div class="copyright small-fonts">
+      <div class="copyright">
         <strong>&copy;&nbsp;2018 SFU Blender Club</strong>
       </div>
-
     </div>
   </div>
 
-  <!-- Javascript should always put to the end -->
+  <!-- JQuery -->
   <script src="js/jsframework/jquery/jquery-3.3.1.min.js"></script>
-  <script src="js/jsframework/threejs/three.js"></script>
   <script src="js/JQuery.js"></script>
+  <!-- ThreeJS -->
+  <script src="js/jsframework/threejs/three.js"></script>
   <script src="js/ThreeJS.js"></script>
 
 </body>
