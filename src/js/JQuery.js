@@ -1,7 +1,6 @@
-function openNav() {
-    document.getElementById("navbar").style.height = "100%";
-}
-
-function closeNav() {
-    document.getElementById("navbar").style.height = "0%";
-}
+$( ".hamburger" ).on("click", function() {
+  $( ".ui-bottom" ).css("height", "100%");
+});
+$( ".closebtn" ).on("click", function() {
+  $( ".ui-bottom" ).css("height", "0%");
+});
